@@ -4,7 +4,7 @@ export const Welcome = () => {
   return (
     <div>
         <Title>Buenos dias</Title>
-        <Image src="src\assets\mastra.png" />
+        <Image src="/mastra.png" />
         <SubTitle>Ingrese una botella</SubTitle>
   </div>
   );

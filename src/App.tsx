@@ -19,7 +19,7 @@ export type BottleType = {
 
 function App() {
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const [page, setPage] = useState<Pages>(Pages.Keypad);
+  const [page, setPage] = useState<Pages>(Pages.Welcome);
 
   const handleFullscreen = () => {
     if (!isFullscreen) {
