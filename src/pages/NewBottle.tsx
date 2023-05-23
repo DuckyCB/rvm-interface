@@ -9,9 +9,9 @@ export type NewBottleProps = {
 export const NewBottle = ({newBottle, handleFinish}: NewBottleProps) => {
   return (
     <NewBottleContainer>
-      <h1>Botella ingresada correctamente</h1>
+      <h1>Botella ingresada</h1>
       <h3>{newBottle.brand}  -  {newBottle.points} puntos</h3>
-      <h2>Puede ingresar una nueva botella o finalizar</h2>
+      <h2>Ingresar nueva o finalizar</h2>
       <ButtonFinish onClick={handleFinish}>Finalizar</ButtonFinish>
     </NewBottleContainer>
   );

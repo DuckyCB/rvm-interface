@@ -18,18 +18,18 @@ export type BottleType = {
 }
 
 function App() {
-  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  // const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [page, setPage] = useState<Pages>(Pages.Welcome);
 
-  const handleFullscreen = () => {
-    if (!isFullscreen) {
-      const elem = document.documentElement;
-      elem.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-    setIsFullscreen(currentFullScreen => !currentFullScreen);
-  };
+  // const handleFullscreen = () => {
+  //   if (!isFullscreen) {
+  //     const elem = document.documentElement;
+  //     elem.requestFullscreen();
+  //   } else {
+  //     document.exitFullscreen();
+  //   }
+  //   setIsFullscreen(currentFullScreen => !currentFullScreen);
+  // };
 
   const handleNextPage = () => {
     if (page === Pages.End) {
@@ -63,11 +63,16 @@ function App() {
 
   return (
     <>
-      <button onClick={handleFullscreen}>
+      {/* <button onClick={handleFullscreen}>
         {isFullscreen ? "x" : "f"}
-      </button>
-      <button onClick={handleNextPage}>
-        Next page
+      </button> */}
+      <button style={{
+        fontSize: '1rem', 
+        position: 'absolute',
+        top: 0,
+        right: 0,
+      }} onClick={handleNextPage}>
+        Next
       </button>
       {pageRouter()}
     </>

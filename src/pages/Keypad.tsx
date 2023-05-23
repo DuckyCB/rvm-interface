@@ -14,7 +14,7 @@ export const Keypad = () => {
         setQuantity((currentQuantity) => currentQuantity + 1);
         setCi((currentCi) => currentCi + number);
     } else {
-        setError("la cédula no puede tener más de 9 digitos")
+        setError("El número no es valido")
     }
   };
 
@@ -30,7 +30,7 @@ export const Keypad = () => {
     if (exists) {
       console.log("accept", ci);
     } else {
-      setError("la cédula no se encuentra en el sistema, pulsa confirmar para guardar igual en el sistema")
+      setError("El número no se encuentra en el sistema, pulsa confirmar para continuar de todas formas")
       setConfirmar(true);
     }
   };
@@ -39,9 +39,7 @@ export const Keypad = () => {
     <PageContainer>
       <h1>Ingrese su telefono</h1>
       <CiContainer>
-        <CiTextContainer>
-            <h2>{ci}</h2>
-        </CiTextContainer>
+        <h2>{ci}</h2>
       </CiContainer>
       <Keypadcontainer>
         <Button onClick={() => handleNumber("1")}>1</Button>
@@ -78,13 +76,10 @@ const PageContainer = styled.div`
 const CiContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 0.25rem;
+    height: 4.5rem;
     background-color: #1a1a1a;
     border-radius: 15px;
-`;
-
-const CiTextContainer = styled.div`
-    height: 2rem;
 `;
 
 const Keypadcontainer = styled.div`
