@@ -37,10 +37,10 @@ export const Keypad = () => {
 
   return (
     <PageContainer>
-      <CiTitle>Ingrese su cédula</CiTitle>
+      <h1>Ingrese su telefono</h1>
       <CiContainer>
         <CiTextContainer>
-            <CiText>{ci}</CiText>
+            <h2>{ci}</h2>
         </CiTextContainer>
       </CiContainer>
       <Keypadcontainer>
@@ -83,15 +83,8 @@ const CiContainer = styled.div`
     border-radius: 15px;
 `;
 
-const CiTitle = styled.h1`
-`;
-
 const CiTextContainer = styled.div`
     height: 2rem;
-`;
-
-const CiText = styled.h2`
-
 `;
 
 const Keypadcontainer = styled.div`
@@ -103,8 +96,6 @@ const Keypadcontainer = styled.div`
 `;
 
 const Button = styled.button`
-  font-size: 1.4rem;
-  font-weight: bolder;
   background-color: #474747;
   :hover {
     background-color: #878787;
@@ -112,8 +103,6 @@ const Button = styled.button`
 `;
 
 const ButtonClear = styled.button`
-  font-size: 1.4rem;
-  font-weight: bolder;
   background-color: red;
   :hover {
     background-color: lightcoral;
@@ -121,8 +110,6 @@ const ButtonClear = styled.button`
 `;
 
 const ButtonAccept = styled.button`
-  font-size: 1.4rem;
-  font-weight: bolder;
   background-color: green;
   :hover {
     background-color: lightgreen;

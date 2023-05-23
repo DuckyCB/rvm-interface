@@ -3,21 +3,13 @@ import styled from "styled-components";
 export const Welcome = () => {
   return (
     <div>
-        <Title>Buenos dias</Title>
+        <h1>Buenos dias</h1>
         <Image src="/mastra.png" />
-        <SubTitle>Ingrese una botella</SubTitle>
+        <h2>Ingrese una botella</h2>
   </div>
   );
 };
 
-const Title = styled.h1`
-    font-size: 3rem;
-`;
-
 const Image = styled.img`
     height: 300px;
-`;
-
-const SubTitle = styled.h2`
-    font-size: 2rem;
 `;

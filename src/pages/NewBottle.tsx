@@ -10,7 +10,7 @@ export const NewBottle = ({newBottle, handleFinish}: NewBottleProps) => {
   return (
     <NewBottleContainer>
       <h1>Botella ingresada correctamente</h1>
-      <h2>{newBottle.brand}  -  {newBottle.points} puntos</h2>
+      <h3>{newBottle.brand}  -  {newBottle.points} puntos</h3>
       <h2>Puede ingresar una nueva botella o finalizar</h2>
       <ButtonFinish onClick={handleFinish}>Finalizar</ButtonFinish>
     </NewBottleContainer>
@@ -24,8 +24,6 @@ const NewBottleContainer = styled.div`
 `;
 
 const ButtonFinish = styled.button`
-  font-size: 1.4rem;
-  font-weight: bolder;
   background-color: green;
   :hover {
     background-color: lightgreen;
